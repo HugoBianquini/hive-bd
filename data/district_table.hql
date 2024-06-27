@@ -1,6 +1,6 @@
 use testdb;
 create external table if not exists district (
-    id STRING,
+    id INT,
     name STRING,
     geometry STRING
 )

@@ -1,10 +1,10 @@
 use testdb;
 create external table if not exists time (
-    id STRING,
+    id INT,
     period STRING,
-    day STRING,
-    month STRING,
-    year STRING,
+    day INT,
+    month INT,
+    year INT,
     weekday STRING
 )
 ROW FORMAT DELIMITED 

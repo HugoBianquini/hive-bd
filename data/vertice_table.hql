@@ -1,10 +1,10 @@
 use testdb;
 create external table if not exists vertice (
-    id STRING,
+    id INT,
     label STRING,
-    district_id STRING,
-    neighborhood_id STRING,
-    zone_id STRING
+    district_id INT,
+    neighborhood_id INT,
+    zone_id INT
 )
 ROW FORMAT DELIMITED 
 FIELDS TERMINATED BY ';' 

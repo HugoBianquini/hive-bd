@@ -1,11 +1,11 @@
 use testdb;
 create external table if not exists segment (
-    id STRING,
+    id INT,
     geometry STRING,
     oneway STRING,
-    lenght STRING,
-    final_vertice_id STRING,
-    start_vertice_id STRING
+    lenght FLOAT,
+    final_vertice_id INT,
+    start_vertice_id INT
 )
 ROW FORMAT DELIMITED 
 FIELDS TERMINATED BY ';' 
