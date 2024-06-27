@@ -1,0 +1,4 @@
+/.DS_Store
+/hdfs
+/metastore-postgresql
+**/*.csv

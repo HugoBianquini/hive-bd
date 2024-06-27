@@ -1,0 +1,17 @@
+hive -f crime_table.hql
+hadoop fs -put crime.csv hdfs://namenode:8020/user/hive/warehouse/testdb.db/crime
+
+hive -f district_table.hql 
+hadoop fs -put district.csv hdfs://namenode:8020/user/hive/warehouse/testdb.db/district
+
+hive -f neighborhood_table.hql 
+hadoop fs -put neighborhood.csv hdfs://namenode:8020/user/hive/warehouse/testdb.db/neighborhood
+
+hive -f segment_table.hql 
+hadoop fs -put segment.csv hdfs://namenode:8020/user/hive/warehouse/testdb.db/segment
+
+hive -f time.hql 
+hadoop fs -put time.csv hdfs://namenode:8020/user/hive/warehouse/testdb.db/time
+
+hive -f vertice.hql 
+hadoop fs -put vertice.csv hdfs://namenode:8020/user/hive/warehouse/testdb.db/vertice
