@@ -9,4 +9,4 @@ create external table if not exists time (
 )
 ROW FORMAT DELIMITED 
 FIELDS TERMINATED BY ';' 
-STORED AS TEXTFILE 'hdfs://namenode:8020/user/hive/warehouse/testdb.db/time';
+STORED AS TEXTFILE location 'hdfs://namenode:8020/user/hive/warehouse/testdb.db/time';
