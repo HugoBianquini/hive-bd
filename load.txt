@@ -10,8 +10,8 @@ hadoop fs -put neighborhood.csv hdfs://namenode:8020/user/hive/warehouse/testdb.
 hive -f segment_table.hql 
 hadoop fs -put segment.csv hdfs://namenode:8020/user/hive/warehouse/testdb.db/segment
 
-hive -f time.hql 
+hive -f time_table.hql 
 hadoop fs -put time.csv hdfs://namenode:8020/user/hive/warehouse/testdb.db/time
 
-hive -f vertice.hql 
+hive -f vertice_table.hql 
 hadoop fs -put vertice.csv hdfs://namenode:8020/user/hive/warehouse/testdb.db/vertice
