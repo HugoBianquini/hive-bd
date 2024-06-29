@@ -1,9 +1,11 @@
+use testdb;
 CREATE TABLE time_partitioned ( 
     id INT, 
     period STRING, 
-    day INT
+    day INT,
+    weekday STRING
 ) 
-PARTITIONED BY (year INT, month INT, weekday STRING) 
+PARTITIONED BY (year INT, month INT) 
 ROW FORMAT DELIMITED 
 FIELDS TERMINATED BY ';' 
-STORED AS TEXTFILE location 'hdfs://namenode:8020/user/hive/warehouse/testdb.db/time';
+STORED AS TEXTFILE;

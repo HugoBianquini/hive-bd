@@ -1,5 +1,6 @@
+use testdb;
 CREATE TABLE crime_partitioned (
-    crime_id INT,
+    id INT,
     total_feminicide INT,
     total_homicide INT,
     total_felony_murder INT,
@@ -11,7 +12,7 @@ CREATE TABLE crime_partitioned (
     segment_id INT,
     time_id INT
 )
-PARTITIONED BY (year INT,month INT, weekday STRING)
+PARTITIONED BY (year INT, month INT)
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ';'
-STORED AS TEXTFILE location 'hdfs://namenode:8020/user/hive/warehouse/testdb.db/crime';
+STORED AS TEXTFILE;

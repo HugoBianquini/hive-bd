@@ -1,3 +1,4 @@
+use testdb;
 CREATE TABLE segment_partitioned ( 
     id INT, 
     geometry STRING, 
@@ -7,4 +8,4 @@ CREATE TABLE segment_partitioned (
 ) 
 PARTITIONED BY (oneway STRING) 
 ROW FORMAT DELIMITED FIELDS TERMINATED BY ';' 
-STORED AS TEXTFILE location 'hdfs://namenode:8020/user/hive/warehouse/testdb.db/segment';
+STORED AS TEXTFILE;
